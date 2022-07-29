@@ -3,7 +3,7 @@ body {
     place-items: center;
     width: 100%;
     font-family: 'Merriweather', serif;
-    
+    background-color: #006236;
 }
 
 .simon {
@@ -62,13 +62,13 @@ body {
     font-family: 'Merriweather', serif;
     cursor: pointer;
     border-radius: 5px;
-    color: #fff;
-    background-color: #587792;
+    color: rgb(18, 13, 13);
+    background-color: #9bf6db;
     padding: 5px;
 }
 
 #startButton:disabled {
-    background-color: #eee;
+    background-color: rgb(43, 191, 171);
 }
 
 .title {

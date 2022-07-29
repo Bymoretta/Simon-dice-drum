@@ -6,7 +6,7 @@ class Simon {
     constructor(simonButtons, startButton, round) {
         this.round = 0;
         this.userPosition = 0;
-        this.totalRounds = 1;
+        this.totalRounds = 4;
         this.sequence = [];
         this.speed = 1000;
         this.blockedButtons = true;
@@ -100,7 +100,7 @@ class Simon {
         let timer = setInterval(() => {
             const button = this.buttons[this.sequence[sequenceIndex]];
             this.buttonSounds[this.sequence[sequenceIndex]].play();
-            this.toggleButtonStyle(button)
+            this.toggleButtonStyle(button) 
             setTimeout( () => this.toggleButtonStyle(button), this.speed / 2)
             sequenceIndex++;
             if (sequenceIndex > this.round) {
@@ -120,6 +120,7 @@ class Simon {
         this.errorSound.play();
         this.display.startButton.disabled = false; 
         this.blockedButtons = true;
+    
     }
 
     // Muestra la animacón de triunfo y actualiza el simon cuando el jugador gana
