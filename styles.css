@@ -3,9 +3,19 @@ body {
     place-items: center;
     width: 100%;
     font-family: 'Merriweather', serif;
-    background-color: #006236;
-}
+    background: url(estudio.jpg);
+    background-size: cover;
 
+}
+.title{
+    
+    font-family: 'Merriweather', serif;
+    border-radius: 3px;
+    color: rgb(18, 13, 13);
+    background-color: #9bf6db;
+    text-align: center;
+
+}
 .simon {
     position: relative;
     margin-top: 50px;
@@ -20,38 +30,35 @@ body {
     transform: rotate(45deg);
 }
 
-.cuadrado {
+.square {
     border-radius: 5px;
     width: 150px;
     height: 150px;
     cursor: pointer;
 }
 
-.cuadrado:active,
+.square:active,
 .active {
     filter: brightness(85%);
 }
 
-.rojo {
+.red {
     background-color: #c22323;
     text-align: center;
 }
 
-.azul {
+.blue {
     background-color: rgba(58, 58, 255, 0.857);
     text-align: center;
-
 }
 
-.verde {
+.green {
     background-color: rgb(64, 195, 8);
-    text-align: center;
-}
+    text-align: center;}
 
-.amarillo {
+.yellow {
     background-color: rgba(254, 239, 35, 0.953);
-    text-align: center;
-}
+    text-align: center;}
 
 #startButton {
     width: 75px;
@@ -76,8 +83,9 @@ body {
 }
 
 .winner {
-    animation: spin 0.70s ease-in-out;
+    animation: spin 1s ease-in-out;
     text-align: left;
+
 }
 
 @keyframes spin { 

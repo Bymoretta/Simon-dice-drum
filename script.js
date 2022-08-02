@@ -1,32 +1,28 @@
 const round = document.getElementById('round');
-const simonButtons = document.getElementsByClassName('cuadrado');
+const simonButtons = document.getElementsByClassName('square');
 const startButton = document.getElementById('startButton');
 
 class Simon {
     constructor(simonButtons, startButton, round) {
         this.round = 0;
         this.userPosition = 0;
-        this.totalRounds = 4;
+        this.totalRounds = 6;
         this.sequence = [];
-        this.speed = 1000;
+        this.speed = 2000;
         this.blockedButtons = true;
         this.buttons = Array.from(simonButtons);
         this.display = {
             startButton,
             round
         }
-        this.errorSound = new Audio('./sonidos/error.mp3');
+        this.errorSound = new Audio('./sounds/error.mp3');
         this.buttonSounds = [
-            new Audio('./sonidos/crash.mp3'),
-            new Audio('./sonidos/kick.mp3'),
-            new Audio('./sonidos/Snare.mp3'),
-            new Audio('./sonidos/Heat.mp3'),
+            new Audio('./sounds/1.mp3'),
+            new Audio('./sounds/2.mp3'),
+            new Audio('./sounds/3.mp3'),
+            new Audio('./sounds/4.mp3'),
         ]
     }
-
-
-
-
 
     // Inicia el Simon
     init() {
@@ -100,7 +96,7 @@ class Simon {
         let timer = setInterval(() => {
             const button = this.buttons[this.sequence[sequenceIndex]];
             this.buttonSounds[this.sequence[sequenceIndex]].play();
-            this.toggleButtonStyle(button) 
+            this.toggleButtonStyle(button)
             setTimeout( () => this.toggleButtonStyle(button), this.speed / 2)
             sequenceIndex++;
             if (sequenceIndex > this.round) {
@@ -120,7 +116,6 @@ class Simon {
         this.errorSound.play();
         this.display.startButton.disabled = false; 
         this.blockedButtons = true;
-    
     }
 
     // Muestra la animacón de triunfo y actualiza el simon cuando el jugador gana
